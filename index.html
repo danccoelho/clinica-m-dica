@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projeto IHC</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+  <header class="header">
+    <div></div>
+    <div class="logo">Logo</div>
+    <div class="language">PT-BR</div>
+  </header>
+
+  <main>
+    <section class="contem-login">
+      <form id="formLogin" novalidate>
+        <h1>Login</h1>
+
+        <div class="circulo">
+          <i class="fas fa-user"></i>
+        </div>
+
+        <label for="email">
+          <h3>Email</h3>
+          <div class="caixas">
+            <input type="email" id="email" placeholder="" />
+            <i class="bx bxs-user"></i>
+          </div>
+        </label>
+
+        <label for="password">
+          <h3>Senha</h3>
+          <div class="caixas">
+            <input type="password" id="password" placeholder="" />
+            <i class="bx bxs-lock-alt"></i>
+          </div>
+        </label>
+
+        <section class="container-lembrar">
+          <label>
+            <input class="check-box" type="checkbox" />
+            Lembrar a senha? |
+            <a href="EsqueceuSenha.html">Esqueceu a senha?</a>
+          </label>
+        </section>
+
+        <button type="submit">Entrar</button>
+
+        <section class="cadastrar">
+          <p>Sem cadastro? <a href="cadastro.html">Cadastra-se</a></p>
+        </section>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    © 2025 Sua Empresa. Todos os direitos reservados.
+  </footer>
+
+  <script src="validacaoLogin.js"></script>
+</body>
+</html>
