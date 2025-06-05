@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', function () {
     console.log('Dados de login:', { email, senha });
 
     setTimeout(() => {
-      window.location.href = 'agendamento.html';
+      window.location.href = 'home.html';
     }, 1000);
   });
 

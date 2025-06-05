@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+
+html, body {
+    height: 100%;
+    margin: 0;
+    background-color: #0a0f3a; /* Fundo azul escuro */
+    font-family: "Jost", sans-serif;
+}
+
+.pagina {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+  
+.cabecalho {
+    background-color: #121b7a;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.rodape {
+    background-color: #121b7a;
+    padding: 20px;
+    text-align: center;
+}
+  
+.logo {
+    text-align: center;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+  
+h3 {
+    margin: 0;
+    color: white; 
+}
+
+.usuario {
+    border: 1px solid white;
+    width: 150px;
+    border-radius: 10px;
+    background-color: #849adc;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px;
+    justify-content: center;
+}
+
+.nome_usuario {
+    color: white;
+    font-size: 14px;
+    margin-left: auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.logo_usuario {
+    display: flex;
+    justify-content: flex-start;
+    width: 50px;
+    height: 50px;
+}
+
+.cpf {
+    display: flex;
+    color: white;
+    flex-direction: column; 
+}
+
+/* Conteúdo principal com fundo azul escuro */
+.conteudo {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #0a0f3a;
+    padding: 40px 0;
+}
+
+/* Cartão branco com formulário */
+.agendamento {
+    width: 90%;
+    max-width: 600px;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.3);
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.input {
+    padding: 8px;
+    font-size: 14px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+}
+
+.opcoes {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    width: 100%;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    color: #121b7a;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+/* Botão centralizado abaixo dos campos */
+.agendar {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.agendar button {
+    background-color: #121b7a;
+    color: white;
+    border-radius: 20px;
+    width: 120px;
+    height: 50px;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+}
+
+.agendar button:hover {
+    background-color: darkblue;
+}

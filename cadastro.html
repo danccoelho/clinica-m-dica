@@ -8,66 +8,65 @@
 </head>
 <body>
 
-  <header class="header">
-    <div></div>
-    <div class="logo">Logo</div>
-    <div class="language">PT-BR</div>
-  </header>
+  <!-- Bandeira no canto superior direito -->
+  <div class="language">
+    <img src="https://upload.wikimedia.org/wikipedia/en/0/05/Flag_of_Brazil.svg" alt="Brasil">
+  </div>
 
   <main class="form-container">
-    <h1>Cadastro</h1>
-    
     <form id="formCadastro" novalidate>
+      <h1>Cadastro</h1>
+
       <section class="grid-campos">
         <label>
-          Nome Completo
-          <input type="text" id="nome" name="nome" placeholder="Nome Completo">
+           <span class="label-text">Nome Completo<span class="obrigatorio">*</span></span>
+          <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo">
         </label>
         <label>
-          Email
-          <input type="email" id="email" name="email" placeholder="E-mail">
+           <span class="label-text">Email<span class="obrigatorio">*</span></span>
+          <input type="email" id="email" name="email" placeholder="Digite seu email">
         </label>
         <label>
-          CPF
-          <input type="text" id="cpf" name="cpf" placeholder="---.---.--- - --">
+           <span class="label-text">CPF<span class="obrigatorio">*</span></span>
+          <input type="text" id="cpf" name="cpf" placeholder="000.000.000-00">
         </label>
         <label>
-          RG
-          <input type="text" id="rg" name="rg" placeholder="-.---.---">
+           <span class="label-text">RG<span class="obrigatorio">*</span></span>
+          <input type="text" id="rg" name="rg" placeholder="00.000.000">
         </label>
         <label>
-          CEP
-          <input type="text" id="cep" name="cep" placeholder="----- - ---">
+           <span class="label-text">CEP<span class="obrigatorio">*</span></span>
+          <input type="text" id="cep" name="cep" placeholder="00000-000">
         </label>
         <label>
-          Endereço
-          <input type="text" id="endereco" name="endereco" placeholder="Endereço">
+           <span class="label-text">Endereço<span class="obrigatorio">*</span></span>
+          <input type="text" id="endereco" name="endereco" placeholder="Digite seu endereço">
         </label>
       </section>
 
       <section class="linha-extra">
         <label>
-          Telefone
-          <input type="text" id="telefone" name="telefone" placeholder="(DDD) Telefone">
+           <span class="label-text">Telefone<span class="obrigatorio">*</span></span>
+          <input type="text" id="telefone" name="telefone" placeholder="(DDD) 90000-0000">
         </label>
         <label>
-          Gênero
-          <input type="text" id="genero" name="genero" placeholder="Masculino/Feminino">
+           <span class="label-text">Gênero<span class="obrigatorio">*</span></span>
+          <input type="text" id="genero" name="genero" placeholder="Masculino / Feminino">
         </label>
         <label>
-          PCD
-          <input type="text" id="pcd" name="pcd" placeholder="Sim/Não">
+          <span class="label-text">PCD</span>
+          <input type="text" id="pcd" name="pcd" placeholder="Sim / Não">
         </label>
       </section>
 
       <section class="linha-dois">
         <label>
-          Senha
-          <input type="password" id="senha" name="senha" placeholder="Senha">
+           <span class="label-text">Senha<span class="obrigatorio">*</span></span>
+          <input type="password" id="senha" name="senha" placeholder="Digite sua senha">
         </label>
         <label>
-          Confirmar Senha
-          <input type="password" id="confirmarSenha" name="confirmarSenha" placeholder="Senha">
+           <span class="label-text">confirmar Senha<span class="obrigatorio">*</span></span>
+          <input type="password" id="confirmarSenha" name="confirmarSenha" placeholder="Confirme sua senha">
         </label>
       </section>
 
@@ -75,7 +74,7 @@
 
       <div class="botoes">
         <a href="index.html"><button type="button" class="voltar">Voltar</button></a>
-        <button type="submit" class="salvar">Salvar</button>
+        <button type="submit" class="salvar">Cadastrar</button>
       </div>
     </form>
   </main>
