@@ -1,70 +1,108 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="pt-br">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hospital</title>
+  <title>Agendamento de Consulta</title>
   <link rel="stylesheet" href="home.css" />
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 <body>
-  <div class="pagina">
-    <header class="cabecalho">
-      <div class="usuario">
-        <section class="logo_usuario"><img src="Usuario.png" alt="Usuário"></section>
-        <div class="info">
-          <section class="nome_usuario" data-i18n="nome_usuario">Nome do usuário</section>
-          <section class="cpf">999999999</section>
-        </div>
-      </div>
-      <div class="logo">
-        <h3 data-i18n="titulo">Hospital Santa Rita</h3>
-      </div>
-      <div class="idioma">
-        <label for="language-select" data-i18n="label_idioma">Idioma:</label>
-        <select id="language-select" onchange="changeLanguage(this.value)">
-          <option value="pt">Português</option>
-          <option value="en">English</option>
-          <option value="de">Deutsch</option>
-        </select>
-      </div>
-    </header>
 
-    <main class="conteudo">
-      <div class="agendamento">
-        <div class="opcoes">
-          <div class="campo">
-            <label data-i18n="especialidade">Especialidade</label>
-            <input class="input" id="Especialidade" type="search" placeholder="Digite sua especialidade" />
-          </div>
-          <div class="campo">
-            <label data-i18n="convenio">Selecione seu convênio</label>
-            <input class="input" id="convenio" type="text" placeholder="Digite seu convênio" />
-          </div>
-          <div class="campo">
-            <label data-i18n="consulta">Consulta</label>
-            <input class="input" id="consulta" type="text" placeholder="Digite o tipo de consulta" />
-          </div>
-          <div class="campo">
-            <label data-i18n="medico">Médico</label>
-            <input class="input" id="medico" type="text" placeholder="Digite o nome do médico" />
-          </div>
-          <div class="campo">
-            <label data-i18n="data">Data da consulta</label>
-            <input class="input" id="data_consulta" type="date" />
-          </div>
-          <div class="campo">
-            <label data-i18n="horario">Selecione seu horário</label>
-            <input class="input" id="horario" type="time" />
-          </div>
-        </div>
-        <div class="agendar">
-          <button data-i18n="botao_agendar">Agendar</button>
-        </div>
-      </div>
-    </main>
+  <main>
+   
+    <div class="menu-hamburguer">
+      <i class="fas fa-bars" id="btn-menu" aria-label="Abrir menu"></i>
+      <nav class="dropdown-menu" id="dropdown-menu" aria-hidden="true" role="menu">
+        <button role="menuitem"><i class="bx bxs-user-circle"></i> Perfil</button>
+        <button role="menuitem"><i class="bx bxs-cog"></i> Configurações</button>
+        <button role="menuitem"><i class="bx bxs-help-circle"></i> Ajuda</button>
+        <button id="btn-sair" role="menuitem"><i class="bx bxs-exit"></i> Sair</button>
+      </nav>
+    </div>
 
-    <footer class="rodape"></footer>
-  </div>
+    <div class="language">
+      <img src="https://upload.wikimedia.org/wikipedia/en/0/05/Flag_of_Brazil.svg" alt="Brasil" />
+    </div>
+
+    <section class="contem-login">
+      <form id="formAgendamento" novalidate>
+        <h1>Agendar Consulta</h1>
+
+        <div class="circulo">
+          <i class="fas fa-calendar-check"></i>
+        </div>
+
+        <label for="nome">
+          <h3>Nome completo</h3>
+          <div class="caixas">
+            <input type="text" id="nome" placeholder="Digite seu nome completo" required />
+            <i class="bx bxs-user"></i>
+          </div>
+        </label>
+
+        <label for="email">
+          <h3>Email</h3>
+          <div class="caixas">
+            <input type="email" id="email" placeholder="Digite seu email" required />
+            <i class="bx bxs-envelope"></i>
+          </div>
+        </label>
+
+        <label for="telefone">
+          <h3>Telefone</h3>
+          <div class="caixas">
+            <input type="tel" id="telefone" placeholder="(00) 00000-0000" required />
+            <i class="bx bxs-phone"></i>
+          </div>
+        </label>
+
+        <label for="especialidade">
+          <h3>Especialidade</h3>
+          <div class="caixas">
+            <select id="especialidade" required>
+              <option value="">Selecione uma especialidade</option>
+              <option>Clínico Geral</option>
+              <option>Cardiologista</option>
+              <option>Dermatologista</option>
+              <option>Pediatra</option>
+              <option>Ortopedista</option>
+            </select>
+            <i class="bx bxs-clinic"></i>
+          </div>
+        </label>
+
+        <label for="data">
+          <h3>Data</h3>
+          <div class="caixas">
+            <input type="date" id="data" required />
+            <i class="bx bxs-calendar"></i>
+          </div>
+        </label>
+
+        <label for="hora">
+          <h3>Hora</h3>
+          <div class="caixas">
+            <input type="time" id="hora" required />
+            <i class="bx bxs-time"></i>
+          </div>
+        </label>
+
+        <button type="submit">Confirmar Agendamento</button>
+      </form>
+    </section>
+
+    <section class="acessibilidade">
+      <div class="quadrado"></div>
+      <div class="quadrado"></div>
+      <div class="quadrado"></div>
+    </section>
+
+    <footer>
+      Cuidando da sua saúde, hoje e sempre. © 2025 HealhtLife. Todos os direitos reservados.
+    </footer>
+  </main>
 
   <script src="home.js"></script>
 </body>

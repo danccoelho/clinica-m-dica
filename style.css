@@ -10,7 +10,7 @@
 }
 
 body {
-  background-color: #003366; /* Azul escuro no fundo para contraste */
+  background-color: #003366; 
   display: flex;
   justify-content: center;
   align-items: center;
@@ -159,4 +159,21 @@ footer{
   margin-left: 15px;
   color: aliceblue;
   font-size: 10px;
+}
+
+.acessibilidade{
+  position: fixed;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 5px;
+  z-index: 999;
+}
+
+.quadrado{
+  width: 20px;
+  height: 20px;
+  background-color: #bc2222;
+  border-radius: 5px;
+  cursor: pointer;
 }

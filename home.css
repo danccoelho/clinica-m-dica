@@ -1,153 +1,222 @@
-@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@400;600&display=swap');
 
-html, body {
-    height: 100%;
-    margin: 0;
-    background-color: #0a0f3a; /* Fundo azul escuro */
-    font-family: "Jost", sans-serif;
-}
-
-.pagina {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
-  
-.cabecalho {
-    background-color: #121b7a;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  font-family: "Jost", sans-serif;
 }
 
-.rodape {
-    background-color: #121b7a;
-    padding: 20px;
-    text-align: center;
+body {
+  background-color: #003366;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
-  
-.logo {
-    text-align: center;
-    height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
+
+.language {
+  position: fixed;
+  top: 15px;
+  right: 20px;
+  z-index: 999;
 }
-  
+
+.language img {
+  width: 40px;
+  height: 25px;
+  object-fit: cover;
+  border-radius: 5px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.language img:hover {
+  transform: scale(1.1);
+}
+
+
+.menu-hamburguer {
+  position: fixed;
+  top: 15px;
+  left: 20px;
+  z-index: 1000;
+}
+
+#btn-menu {
+  font-size: 28px;
+  color: white;
+  cursor: pointer;
+  user-select: none;
+  transition: color 0.3s;
+}
+
+#btn-menu:hover {
+  color: #00f0a0;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 45px;
+  left: 0;
+  background: rgba(0, 51, 102, 0.95);
+  border-radius: 10px;
+  padding: 10px 0;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+  min-width: 160px;
+  backdrop-filter: blur(8px);
+  opacity: 0;
+  transform: translateY(-10px);
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  z-index: 1100;
+}
+
+.dropdown-menu.show {
+  display: flex;
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.dropdown-menu button {
+  width: 100%;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1rem;
+  padding: 12px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  transition: background-color 0.25s ease;
+}
+
+.dropdown-menu button i {
+  font-size: 20px;
+}
+
+.dropdown-menu button:hover {
+  background-color: #005f7a;
+}
+
+.contem-login {
+  background-color: #fff;
+  padding: 2.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 8px 30px rgba(6, 240, 190, 0.3);
+  width: 400px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  text-align: center;
+  color: #003366;
+  margin-bottom: 10px;
+}
+
+.circulo {
+  width: 90px;
+  height: 90px;
+  border: 4px solid #003366;
+  border-radius: 50%;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 15px auto;
+}
+
+.circulo i {
+  font-size: 50px;
+  color: #003366;
+}
+
 h3 {
-    margin: 0;
-    color: white; 
+  margin-top: 20px;
+  margin-bottom: 5px;
+  color: #003366;
 }
 
-.usuario {
-    border: 1px solid white;
-    width: 150px;
-    border-radius: 10px;
-    background-color: #849adc;
-    margin-bottom: 10px;
-    display: flex;
-    justify-content: space-between;
-    overflow: hidden;
+.caixas {
+  width: 300px;
+  position: relative;
 }
 
-.info {
-    display: flex;
-    flex-direction: column;
-    margin-right: 20px;
-    justify-content: center;
+.caixas input,
+.caixas select {
+  width: 100%;
+  height: 45px;
+  border-radius: 25px;
+  margin-top: 5px;
+  padding: 10px 15px;
+  border: 2px solid #003366;
+  font-size: 1rem;
+  appearance: none;
+  background-color: white;
 }
 
-.nome_usuario {
-    color: white;
-    font-size: 14px;
-    margin-left: auto;
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
+.caixas i {
+  position: absolute;
+  right: 15px;
+  top: 18px;
+  font-size: 20px;
+  color: #003366;
+  pointer-events: none;
 }
 
-.logo_usuario {
-    display: flex;
-    justify-content: flex-start;
-    width: 50px;
-    height: 50px;
+button {
+  height: 45px;
+  width: 100%;
+  border-radius: 25px;
+  color: white;
+  background-color: #003366;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 20px;
 }
 
-.cpf {
-    display: flex;
-    color: white;
-    flex-direction: column; 
+button:hover {
+  background-color: #002244;
 }
 
-/* Conteúdo principal com fundo azul escuro */
-.conteudo {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #0a0f3a;
-    padding: 40px 0;
+footer {
+  position: fixed;
+  bottom: 10px;
+  text-align: center;
+  color: aliceblue;
+  font-size: 10px;
+  width: 100%;
 }
 
-/* Cartão branco com formulário */
-.agendamento {
-    width: 90%;
-    max-width: 600px;
-    background-color: white;
-    border-radius: 20px;
-    box-shadow: 0 0 15px rgba(0,0,0,0.3);
-    padding: 30px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.acessibilidade {
+  position: fixed;
+  bottom: 60px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 5px;
+  z-index: 999;
 }
 
-.input {
-    padding: 8px;
-    font-size: 14px;
-    border-radius: 10px;
-    border: 1px solid #ccc;
-}
-
-.opcoes {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 15px;
-    width: 100%;
-}
-
-.campo {
-    display: flex;
-    flex-direction: column;
-}
-
-label {
-    color: #121b7a;
-    font-weight: bold;
-    margin-bottom: 5px;
-}
-
-/* Botão centralizado abaixo dos campos */
-.agendar {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    margin-top: 20px;
-}
-
-.agendar button {
-    background-color: #121b7a;
-    color: white;
-    border-radius: 20px;
-    width: 120px;
-    height: 50px;
-    font-size: 18px;
-    border: none;
-    cursor: pointer;
-}
-
-.agendar button:hover {
-    background-color: darkblue;
+.quadrado {
+  width: 20px;
+  height: 20px;
+  background-color: #bc2222;
+  border-radius: 5px;
+  cursor: pointer;
 }

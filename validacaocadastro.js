@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   form.addEventListener('submit', function (e) {
     e.preventDefault();
-    mensagem.textContent = ''; // Limpa mensagens anteriores
+    mensagem.textContent = ''; 
 
     const nome = form.nome.value.trim();
     const email = form.email.value.trim();
