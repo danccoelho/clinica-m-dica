@@ -82,7 +82,7 @@ O **HealhtLife** é uma aplicação web moderna e responsiva, criada com foco em
 
 <div align="left">
 
-**Seu Nome**  
+**Daniel Campos Coelho**  
 Estudante de Ciência da Computação — CEUB
 
 🔗 [LinkedIn](https://www.linkedin.com/in/daniel-coelho-818381293/)  
