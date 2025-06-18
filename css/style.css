@@ -10,7 +10,7 @@
 }
 
 body {
-  background-color: #003366; 
+  background: linear-gradient(135deg, #0059b3 0%, #004080 50%, #003366 100%);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -101,6 +101,11 @@ h3 {
   color: #003366;
 }
 
+.check-box{
+    accent-color:#003366;
+}
+
+
 .container-lembrar {
   margin: 20px 0;
   text-align: center;
@@ -124,7 +129,7 @@ button {
   width: 100%;
   border-radius: 25px;
   color: white;
-  background-color: #003366;
+  background: linear-gradient(135deg, #0059b3 0%, #004080 50%, #003366 100%);
   font-size: 1rem;
   border: none;
   cursor: pointer;
@@ -132,7 +137,7 @@ button {
 }
 
 button:hover {
-  background-color: #002244;
+  background: linear-gradient(135deg, #3399ff 0%, #2672b9 50%, #1f4f80 100%);
 }
 
 .cadastrar {

@@ -8,7 +8,7 @@
 }
 
 body {
-  background-color: #003366; 
+  background: linear-gradient(135deg, #0059b3 0%, #004080 50%, #003366 100%);
 }
 
 .language {
@@ -118,7 +118,7 @@ button {
   height: 40px;
   border-radius: 25px;
   color: white;
-  background-color: #003366;
+  background: linear-gradient(135deg, #0059b3 0%, #004080 50%, #003366 100%);
   border: none;
   font-weight: 600;
   cursor: pointer;
@@ -126,7 +126,7 @@ button {
 }
 
 button:hover {
-  background-color: #00008b;
+  background: linear-gradient(135deg, #3399ff 0%, #2672b9 50%, #1f4f80 100%);
 }
 
 .obrigatorio {

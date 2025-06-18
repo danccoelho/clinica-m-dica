@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Recuperar Senha</title>
-  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="stylesheet" href="./css/esqueceuSenha.css" />
   <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
@@ -15,21 +15,21 @@
       <img src="https://upload.wikimedia.org/wikipedia/en/0/05/Flag_of_Brazil.svg" alt="Brasil">
     </div>
 
-    <section class="contem-login">
+    <section class="container-recuperar">
       <form id="formRecuperar" novalidate>
         <h1>Recuperar Senha</h1>
 
-        <div class="circulo">
+        <div class="circulo-icone">
           <i class="fas fa-unlock-alt"></i>
         </div>
 
-        <p style="text-align: center; margin: 10px 0; color: #003366;">
-          Informe seu email cadastrado para enviarmos um link de redefinição de senha.
+        <p>
+          Informe seu e-mail cadastrado para enviarmos um link de redefinição de senha.
         </p>
 
-        <label for="email">
-          <h3>Email</h3>
-          <div class="caixas">
+        <label for="email" class="input-group">
+          <span class="input-label">Email</span>
+          <div class="caixa-input">
             <input type="email" id="email" placeholder="Digite seu email" required />
             <i class="bx bxs-envelope"></i>
           </div>
@@ -37,29 +37,12 @@
 
         <button type="submit">Enviar Link</button>
 
-        <section class="cadastrar">
+        <div class="link-voltar">
           <p>Lembrou a senha? <a href="index.html">Voltar para Login</a></p>
-        </section>
+        </div>
       </form>
     </section>
-
-    <section class="acessibilidade">
-      <div class="quadrado">
-
-      </div>
-      <div class="quadrado">
-
-      </div>
-      <div class="quadrado">
-
-      </div>
-    </section>
-
-    <footer>
-      Cuidando da sua saúde, hoje e sempre. © 2025 HealhtLife. Todos os direitos reservados.
-    </footer>
   </main>
 
-  <script src="validacaoRecuperar.js"></script>
 </body>
 </html>

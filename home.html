@@ -6,104 +6,131 @@
   <title>Agendamento de Consulta</title>
   <link rel="stylesheet" href="./css/home.css" />
   <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 <body>
-
-  <main>
-   
-    <div class="menu-hamburguer">
-      <i class="fas fa-bars" id="btn-menu" aria-label="Abrir menu"></i>
-      <nav class="dropdown-menu" id="dropdown-menu" aria-hidden="true" role="menu">
-        <button role="menuitem"><i class="bx bxs-user-circle"></i> Perfil</button>
-        <button role="menuitem"><i class="bx bxs-cog"></i> Configurações</button>
-        <button role="menuitem"><i class="bx bxs-help-circle"></i> Ajuda</button>
-        <button id="btn-sair" role="menuitem"><i class="bx bxs-exit"></i> Sair</button>
+  <div class="app-layout">
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <h2 class="logo-text">Health.Life</h2>
+        <i class='bx bxs-heart logo-icon'></i>
+      </div>
+      <nav class="sidebar-nav">
+        <ul>
+          <li><a href="#" class="active"><i class='bx bxs-calendar-plus'></i><span>Agendar Consulta</span></a></li>
+          <li><a href="#"><i class='bx bxs-calendar-heart'></i><span>Meus Agendamentos</span></a></li>
+          <li><a href="#"><i class='bx bxs-first-aid'></i><span>Meu Convênio</span></a></li>
+          <li><a href="#"><i class='bx bxs-vial'></i><span>Exames</span></a></li>
+          <li><a href="#"><i class='bx bxs-message-dots'></i><span>Mensagens</span></a></li>
+        </ul>
       </nav>
-    </div>
-
-    <div class="language">
-      <img src="https://upload.wikimedia.org/wikipedia/en/0/05/Flag_of_Brazil.svg" alt="Brasil" />
-    </div>
-
-    <section class="contem-login">
-      <form id="formAgendamento" novalidate>
-        <h1>Agendar Consulta</h1>
-
-        <div class="circulo">
-          <i class="fas fa-calendar-check"></i>
+      <div class="sidebar-footer">
+        <div class="user-section">
+          <div class="user-info-header">
+             <i class='bx bxs-user-circle'></i>
+             <div class="user-details">
+                <span class="user-name">Daniel Campos</span>
+                <span class="user-email">dan.ccoelho@email.com</span>
+             </div>
+          </div>
         </div>
+        <div class="logout-section">
+            <a href="index.html"><i class='bx bx-log-out'></i><span>Sair</span></a>
+        </div>
+      </div>
+    </aside>
 
-        <label for="nome">
-          <h3>Nome completo</h3>
-          <div class="caixas">
-            <input type="text" id="nome" placeholder="Digite seu nome completo" required />
-            <i class="bx bxs-user"></i>
-          </div>
-        </label>
+    <main class="main-content">
+      <header class="main-header">
+        <a href="#" class="toggle-sidebar-btn" aria-label="Esconder barra lateral">
+          <i class='bx bx-menu'></i>
+        </a>
+      </header>
 
-        <label for="email">
-          <h3>Email</h3>
-          <div class="caixas">
-            <input type="email" id="email" placeholder="Digite seu email" required />
-            <i class="bx bxs-envelope"></i>
-          </div>
-        </label>
+      <div class="content-container">
+        <section class="container-agendamento">
+          <h1>Agendar Nova Consulta</h1>
+          <form id="formAgendamento" novalidate>
+            <fieldset>
+              <legend>Detalhes da Consulta</legend>
+              <div class="form-grid">
+                <div class="form-group">
+                  <label for="tipo-consulta">Tipo de Consulta</label>
+                  <select id="tipo-consulta" required>
+                    <option value="">Primeira vez ou Retorno?</option>
+                    <option>Primeira Consulta</option>
+                    <option>Retorno</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="convenio">Convênio</label>
+                  <select id="convenio" required>
+                    <option value="">Selecione o convênio</option>
+                    <option>Unimed</option>
+                    <option>Bradesco Saúde</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="especialidade">Especialidade</label>
+                  <select id="especialidade" required>
+                    <option value="">Selecione a especialidade</option>
+                    <option>Clínico Geral</option>
+                    <option>Cardiologia</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="profissional">Profissional</label>
+                  <select id="profissional" required>
+                    <option value="">Escolha um profissional</option>
+                    <option>Dr. João Silva</option>
+                    <option>Dra. Maria Oliveira</option>
+                  </select>
+                </div>
+                <div class="form-group form-group-full">
+                  <label for="data">Data da Consulta</label>
+                  <input type="date" id="data" required />
+                </div>
+                <div class="form-group form-group-full">
+                  <label>Horários Disponíveis</label>
+                  <div class="caixas-canvas">
+                    <canvas id="horario-canvas" width="400" height="110"></canvas>
+                    <input type="hidden" id="hora" name="hora" required />
+                  </div>
+                  <div class="canvas-legend">
+                      <span class="legend-item"><span class="color-box available"></span>Disponível</span>
+                      <span class="legend-item"><span class="color-box selected"></span>Selecionado</span>
+                      <span class="legend-item"><span class="color-box unavailable"></span>Ocupado</span>
+                  </div>
+                </div>
+                 <div class="form-group form-group-full">
+                    <label for="observacoes">Observações (Opcional)</label>
+                    <textarea id="observacoes" rows="3" placeholder="Gostaria de informar algo ao profissional?"></textarea>
+                </div>
+              </div>
+            </fieldset>
+            <div class="form-actions">
+              <button type="submit">Confirmar Agendamento</button>
+            </div>
+          </form>
+        </section>
+      </div>
+    </main>
 
-        <label for="telefone">
-          <h3>Telefone</h3>
-          <div class="caixas">
-            <input type="tel" id="telefone" placeholder="(00) 00000-0000" required />
-            <i class="bx bxs-phone"></i>
-          </div>
-        </label>
-
-        <label for="especialidade">
-          <h3>Especialidade</h3>
-          <div class="caixas">
-            <select id="especialidade" required>
-              <option value="">Selecione uma especialidade</option>
-              <option>Clínico Geral</option>
-              <option>Cardiologista</option>
-              <option>Dermatologista</option>
-              <option>Pediatra</option>
-              <option>Ortopedista</option>
-            </select>
-            <i class="bx bxs-clinic"></i>
-          </div>
-        </label>
-
-        <label for="data">
-          <h3>Data</h3>
-          <div class="caixas">
-            <input type="date" id="data" required />
-            <i class="bx bxs-calendar"></i>
-          </div>
-        </label>
-
-        <label for="hora">
-          <h3>Hora</h3>
-          <div class="caixas">
-            <input type="time" id="hora" required />
-            <i class="bx bxs-time"></i>
-          </div>
-        </label>
-
-        <button type="submit">Confirmar Agendamento</button>
-      </form>
-    </section>
-
-    <section class="acessibilidade">
-      <div class="quadrado"></div>
-      <div class="quadrado"></div>
-      <div class="quadrado"></div>
-    </section>
-
-    <footer>
-      Cuidando da sua saúde, hoje e sempre. © 2025 HealhtLife. Todos os direitos reservados.
-    </footer>
-  </main>
+    <div class="accessibility-panel">
+        <div class="accessibility-submenu">
+            <button aria-label="Aumentar fonte"><i class='bx bx-font-size'></i></button>
+            <button aria-label="Diminuir fonte"><i class='bx bx-font'></i></button>
+            <button aria-label="Modo de alto contraste">
+                <img src="./img/contrast.png" alt="Ícone de alto contraste" class="contrast-icon">
+            </button>
+        </div>
+        <button class="accessibility-trigger" aria-label="Abrir opções de acessibilidade">
+            <i class='bx bx-universal-access'></i>
+        </button>
+    </div>
+  </div>
 
   <script src="./js/home.js"></script>
+  <script src="./js/seletorHorario.js"></script>
+  <script src="./js/acessibilidade.js"></script>
 </body>
 </html>
