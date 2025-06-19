@@ -1,184 +1,290 @@
 @import url('https://fonts.googleapis.com/css2?family=Jost:wght@400;600&display=swap');
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  list-style: none;
-  text-decoration: none;
-  font-family: "Jost", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: "Jost", sans-serif;
 }
 
 body {
-  background: linear-gradient(135deg, #0059b3 0%, #004080 50%, #003366 100%);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+    background: linear-gradient(135deg, #0059b3 0%, #004080 50%, #003366 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px 0;
 }
 
 .language {
-  position: fixed;
-  top: 15px;
-  right: 20px;
-  z-index: 999;
+    position: fixed;
+    top: 15px;
+    right: 20px;
+    z-index: 999;
 }
 
 .language img {
-  width: 40px;
-  height: 25px;
-  object-fit: cover;
-  border-radius: 5px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-  cursor: pointer;
-  transition: transform 0.3s;
+    width: 40px;
+    height: 25px;
+    object-fit: cover;
+    border-radius: 5px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transition: transform 0.3s;
 }
 
 .language img:hover {
-  transform: scale(1.1);
+    transform: scale(1.1);
 }
+
 .contem-login {
-  background-color: #fff;
-  padding: 2.5rem;
-  border-radius: 1rem;
-  box-shadow: 0 8px 30px rgba(6, 240, 190, 0.3);
-  width: 400px;
-  height: auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+    background-color: #fff;
+    padding: 2.5rem;
+    border-radius: 1rem;
+    box-shadow: 0 8px 30px rgba(6, 240, 190, 0.3);
+    max-width: 400px;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 15px;
 }
 
 h1 {
-  text-align: center;
-  color: #003366;
-  margin-bottom: 10px;
+    text-align: center;
+    color: #003366;
+    margin-bottom: 10px;
 }
 
 .circulo {
-  width: 90px;
-  height: 90px;
-  border: 4px solid #003366;
-  border-radius: 50%;
-  background-color: transparent;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-left: 102px;
+    width: 90px;
+    height: 90px;
+    border: 4px solid #003366;
+    border-radius: 50%;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+    margin-left: 105px;
 }
 
 .circulo i {
-  font-size: 50px;
-  color: #003366;
+    font-size: 50px;
+    color: #003366;
 }
 
 h3 {
-  margin-top: 20px;
-  margin-bottom: 5px;
-  color: #003366;
+    margin-top: 20px;
+    margin-bottom: 5px;
+    color: #003366;
 }
 
 .caixas {
-  width: 300px;
-  height: auto;
-  position: relative;
+    width: 300px;
+    max-width: 100%;
+    height: auto;
+    position: relative;
 }
 
 .caixas input {
-  width: 100%;
-  height: 45px;
-  border-radius: 25px;
-  margin-top: 5px;
-  padding: 10px;
-  border: 2px solid #003366;
+    width: 100%;
+    height: 45px;
+    border-radius: 25px;
+    margin-top: 5px;
+    padding: 10px;
+    border: 2px solid #003366;
 }
 
 .caixas i {
-  position: absolute;
-  right: 15px;
-  top: 18px;
-  font-size: 20px;
-  color: #003366;
+    position: absolute;
+    right: 15px;
+    top: 18px;
+    font-size: 20px;
+    color: #003366;
 }
-
-.check-box{
-    accent-color:#003366;
-}
-
 
 .container-lembrar {
-  margin: 20px 0;
-  text-align: center;
+    margin: 20px 0;
+    text-align: center;
 }
 
 .container-lembrar label {
-  color: #003366;
-  font-size: 0.9rem;
+    color: #003366;
+    font-size: 0.9rem;
 }
 
 .container-lembrar a {
-  color: #003366;
+    color: #003366;
 }
 
 .container-lembrar a:hover {
-  text-decoration: underline;
+    text-decoration: underline;
 }
 
 button {
-  height: 45px;
-  width: 100%;
-  border-radius: 25px;
-  color: white;
-  background: linear-gradient(135deg, #0059b3 0%, #004080 50%, #003366 100%);
-  font-size: 1rem;
-  border: none;
-  cursor: pointer;
-  transition: background-color 0.3s;
+    height: 45px;
+    width: 100%;
+    max-width: 300px;
+    border-radius: 25px;
+    color: white;
+    background: linear-gradient(135deg, #0059b3 0%, #004080 50%, #003366 100%);
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
 
 button:hover {
-  background: linear-gradient(135deg, #3399ff 0%, #2672b9 50%, #1f4f80 100%);
+    background: linear-gradient(135deg, #3399ff 0%, #2672b9 50%, #1f4f80 100%);
 }
 
 .cadastrar {
-  margin-top: 20px;
-  margin-left: 60px;
+    margin-top: 20px;
+    text-align: center;
+    margin-left: 0;
 }
 
 .cadastrar p {
-  color: #003366;
+    color: #003366;
 }
 
 .cadastrar a {
-  color: #003366;
+    color: #003366;
 }
 
 .cadastrar a:hover {
-  text-decoration: underline;
+    text-decoration: underline;
 }
 
-
-footer{
-  display: flex;
-  margin-top: 45px;
-  margin-left: 15px;
-  color: aliceblue;
-  font-size: 10px;
+footer {
+    position: fixed;
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: aliceblue;
+    font-size: 10px;
+    text-align: center;
 }
 
-.acessibilidade{
-  position: fixed;
-  right: 20px;
-  display: flex;
-  flex-direction: column;
-  row-gap: 5px;
-  z-index: 999;
+.accessibility-panel {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.quadrado{
-  width: 20px;
-  height: 20px;
-  background-color: #bc2222;
-  border-radius: 5px;
-  cursor: pointer;
+.accessibility-submenu {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 10px;
+    opacity: 0;
+    transform: translateY(10px);
+    pointer-events: none;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.accessibility-panel:hover .accessibility-submenu {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+.accessibility-panel button {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #0059b3 0%, #004080 50%, #003366 100%);
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    border: none;
+}
+
+.accessibility-trigger {
+    width: 60px;
+    height: 60px;
+    font-size: 2rem;
+}
+
+body.high-contrast {
+    background: #000 !important;
+}
+
+body.high-contrast .contem-login {
+    background-color: #000 !important;
+    border: 2px solid #FFFF00;
+}
+
+body.high-contrast h1,
+body.high-contrast h3,
+body.high-contrast .container-lembrar label,
+body.high-contrast .container-lembrar a,
+body.high-contrast .cadastrar p,
+body.high-contrast .cadastrar a {
+    color: #FFFF00 !important;
+}
+
+body.high-contrast .caixas i {
+    color: #FFFF00 !important;
+}
+
+body.high-contrast .circulo {
+    border-color: #FFFF00;
+    color: #FFFF00;
+}
+
+body.high-contrast .circulo i {
+    color: #FFFF00;
+}
+
+body.high-contrast .caixas input {
+    background-color: #333 !important;
+    color: #FFF !important;
+    border-color: #FFFF00 !important;
+}
+
+body.high-contrast button[type="submit"] {
+    background-color: #FFFF00 !important;
+    color: #000 !important;
+    font-weight: 700;
+}
+
+body.high-contrast .accessibility-panel button {
+    background-color: #FFFF00 !important;
+    color: #000 !important;
+}
+
+@media (max-width: 480px) {
+  .contem-login {
+    padding: 2rem 1.5rem;
+  }
+
+  .accessibility-panel {
+    bottom: 10px;
+    right: 10px;
+  }
+
+  .accessibility-panel button {
+    width: 45px;
+    height: 45px;
+    font-size: 1.3rem;
+  }
+
+  .accessibility-trigger {
+    width: 55px;
+    height: 55px;
+    font-size: 1.8rem;
+  }
 }

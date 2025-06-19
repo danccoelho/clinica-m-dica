@@ -3,12 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./css/cadastroStyle.css">
   <title>Cadastro</title>
+  <link rel="stylesheet" href="./css/cadastroStyle.css">
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 <body>
 
- 
   <div class="language">
     <img src="https://upload.wikimedia.org/wikipedia/en/0/05/Flag_of_Brazil.svg" alt="Brasil">
   </div>
@@ -87,18 +88,26 @@
         </div>
       </form>
     </div>
-
-    <section class="acessibilidade">
-      <div class="quadrado"></div>
-      <div class="quadrado"></div>
-      <div class="quadrado"></div>
-    </section>
   </main>
+
+  <div class="accessibility-panel">
+    <div class="accessibility-submenu">
+        <button aria-label="Aumentar fonte"><i class='bx bx-font-size'></i></button>
+        <button aria-label="Diminuir fonte"><i class='bx bx-font'></i></button>
+        <button aria-label="Modo de alto contraste">
+            <i class="fa-solid fa-circle-half-stroke"></i>
+        </button>
+    </div>
+    <button class="accessibility-trigger" aria-label="Abrir opções de acessibilidade">
+        <i class='bx bx-universal-access'></i>
+    </button>
+  </div>
 
   <footer>
     Cuidando da sua saúde, hoje e sempre. © 2025 HealhtLife. Todos os direitos reservados.
   </footer>
 
   <script src="./js/validacaocadastro.js"></script>
+  <script src="./js/acessibilidade.js"></script>
 </body>
 </html>

@@ -6,6 +6,7 @@
   <title>Agendamento de Consulta</title>
   <link rel="stylesheet" href="./css/home.css" />
   <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 <body>
   <div class="app-layout">
@@ -28,13 +29,13 @@
           <div class="user-info-header">
              <i class='bx bxs-user-circle'></i>
              <div class="user-details">
-                <span class="user-name">Daniel Campos</span>
-                <span class="user-email">dan.ccoelho@email.com</span>
+                <span class="user-name" id="user-name">Carregando...</span>
+                <span class="user-email" id="user-email"></span>
              </div>
           </div>
         </div>
         <div class="logout-section">
-            <a href="index.html"><i class='bx bx-log-out'></i><span>Sair</span></a>
+            <a href="#" id="logout-btn"><i class='bx bx-log-out'></i><span>Sair</span></a>
         </div>
       </div>
     </aside>
@@ -120,7 +121,7 @@
             <button aria-label="Aumentar fonte"><i class='bx bx-font-size'></i></button>
             <button aria-label="Diminuir fonte"><i class='bx bx-font'></i></button>
             <button aria-label="Modo de alto contraste">
-                <img src="./img/contrast.png" alt="Ícone de alto contraste" class="contrast-icon">
+                <i class="fa-solid fa-circle-half-stroke"></i>
             </button>
         </div>
         <button class="accessibility-trigger" aria-label="Abrir opções de acessibilidade">

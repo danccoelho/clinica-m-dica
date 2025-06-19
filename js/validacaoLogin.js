@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     mensagem.textContent = 'Login validado com sucesso!';
     mensagem.style.color = 'green';
-
+    localStorage.setItem('userEmail', email);
     console.log('Dados de login:', { email, senha });
 
     setTimeout(() => {

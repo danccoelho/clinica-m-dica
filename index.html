@@ -11,7 +11,6 @@
 <body>
 
   <main>
-
     <div class="language"><img src="https://upload.wikimedia.org/wikipedia/en/0/05/Flag_of_Brazil.svg" alt="Brasil"></div>
 
     <section class="contem-login">
@@ -54,17 +53,18 @@
       </form>
     </section>
 
-    <section class="acessibilidade">
-    <div class="quadrado">
-
+    <div class="accessibility-panel">
+        <div class="accessibility-submenu">
+            <button aria-label="Aumentar fonte"><i class='bx bx-font-size'></i></button>
+            <button aria-label="Diminuir fonte"><i class='bx bx-font'></i></button>
+            <button aria-label="Modo de alto contraste">
+                <i class="fa-solid fa-circle-half-stroke"></i>
+            </button>
+        </div>
+        <button class="accessibility-trigger" aria-label="Abrir opções de acessibilidade">
+            <i class='bx bx-universal-access'></i>
+        </button>
     </div>
-    <div class="quadrado">
-
-    </div>
-     <div class="quadrado">
-
-    </div>
-   </section>
 
     <footer>
       Cuidando da sua saúde, hoje e sempre. © 2025 HealhtLife. Todos os direitos reservados.
@@ -72,5 +72,6 @@
   </main>
 
   <script src="./js/validacaoLogin.js"></script>
+  <script src="./js/acessibilidade.js"></script>
 </body>
 </html>

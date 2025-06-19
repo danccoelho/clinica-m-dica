@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
 :root {
-    --primary-color: #1A2A6C;
-    --secondary-color: #00f0a0;
+    --primary-color: #003366;
+    --secondary-color: #00A8FF;
     --sidebar-bg: #FFFFFF;
-    --main-bg: #E4E9F7;
+    --main-bg-gradient: linear-gradient(135deg, #0059b3 0%, #004080 50%, #003366 100%);
     --text-color: #333;
     --text-light: #555;
     --border-color: #e0e0e0;
@@ -18,7 +18,7 @@
 }
 
 body {
-    background-color: var(--main-bg);
+    background: var(--main-bg-gradient);
 }
 
 .app-layout {
@@ -26,7 +26,6 @@ body {
     min-height: 100vh;
 }
 
-/* ===== ESTILOS DA BARRA LATERAL (SIDEBAR) ===== */
 .sidebar {
     width: 260px;
     background-color: var(--sidebar-bg);
@@ -121,7 +120,22 @@ body {
     color: var(--text-light);
 }
 
-/* --- BARRA LATERAL ESCONDIDA --- */
+.logout-section a {
+    text-decoration: none;
+    color: var(--text-light);
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 12px;
+    border-radius: 8px;
+    font-weight: 500;
+}
+
+.logout-section a:hover {
+    background-color: #f3f4f6;
+}
+
+
 .app-layout.sidebar-collapsed .sidebar {
     width: 78px;
 }
@@ -135,14 +149,10 @@ body {
     width: 0;
 }
 
-.app-layout.sidebar-collapsed .main-content {
-    margin-left: 0;
-}
 
-/* ===== CONTEÚDO PRINCIPAL ===== */
 .main-content {
     flex: 1;
-    background-color: var(--main-bg);
+    background-color: transparent;
     padding: 15px 30px;
     transition: margin-left 0.3s ease;
 }
@@ -155,7 +165,7 @@ body {
 
 .toggle-sidebar-btn i {
     font-size: 1.8rem;
-    color: var(--primary-color);
+    color: #FFF;
     cursor: pointer;
 }
 
@@ -273,24 +283,46 @@ legend {
 
 .form-actions button {
     padding: 12px 30px;
-    border-radius: 8px;
+    border-radius: 25px;
     color: white;
-    background-color: var(--primary-color);
+    background: linear-gradient(135deg, #0059b3 0%, #004080 50%, #003366 100%);
     font-size: 1rem;
     font-weight: 600;
     border: none;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-/* ===== PAINEL DE ACESSIBILIDADE ===== */
+.form-actions button:hover {
+     background: linear-gradient(135deg, #3399ff 0%, #2672b9 50%, #1f4f80 100%);
+}
+
+
 .accessibility-panel {
     position: fixed;
     bottom: 20px;
     right: 20px;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.accessibility-submenu {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    z-index: 1000;
+    margin-bottom: 10px;
+    opacity: 0;
+    transform: translateY(10px);
+    pointer-events: none;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.accessibility-panel:hover .accessibility-submenu {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
 }
 
 .accessibility-panel button {
@@ -298,7 +330,7 @@ legend {
     height: 50px;
     border-radius: 50%;
     border: none;
-    background-color: var(--primary-color);
+    background: linear-gradient(135deg, #0059b3 0%, #004080 50%, #003366 100%); 
     color: white;
     font-size: 1.5rem;
     cursor: pointer;
@@ -308,20 +340,16 @@ legend {
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
 
-
-
-/*
-=========================================
---- ESTILOS PARA MODO DE ALTO CONTRASTE ---
-=========================================
-*/
+.accessibility-trigger {
+    width: 60px;
+    height: 60px;
+    font-size: 2rem;
+}
 
 
 body.high-contrast {
-    background-color: #000 !important;
-    color: #FFF !important;
+    background: #000 !important;
 }
-
 
 body.high-contrast .sidebar {
     background-color: #000 !important;
@@ -347,7 +375,6 @@ body.high-contrast .sidebar-nav a.active {
     color: #000 !important;
 }
 
-
 body.high-contrast .toggle-sidebar-btn i {
     color: #FFFF00 !important;
 }
@@ -359,9 +386,8 @@ body.high-contrast .container-agendamento {
 
 body.high-contrast h1,
 body.high-contrast legend {
-    color: #FFFF00 !important; 
+    color: #FFFF00 !important;
 }
-
 
 body.high-contrast .form-group label {
     color: #FFF !important;
@@ -375,7 +401,6 @@ body.high-contrast .form-group textarea {
     border-color: #FFFF00 !important;
 }
 
-
 body.high-contrast .form-actions button {
     background-color: #FFFF00 !important;
     color: #000 !important;
@@ -388,75 +413,14 @@ body.high-contrast .accessibility-panel button {
 }
 
 
-
-/* ===== PAINEL DE ACESSIBILIDADE ===== */
-.accessibility-panel {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    z-index: 1000;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+@media (max-width: 992px) {
+    .app-layout.sidebar-collapsed .main-content {
+        margin-left: 78px;
+    }
 }
 
-.accessibility-submenu {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    margin-bottom: 10px;
-    
-    opacity: 0;
-    transform: translateY(10px);
-    pointer-events: none;
-    transition: opacity 0.3s ease, transform 0.3s ease;
-}
-
-
-.accessibility-panel:hover .accessibility-submenu {
-    opacity: 1;
-    transform: translateY(0);
-    pointer-events: auto;
-}
-
-.accessibility-submenu button {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    border: none;
-    background-color: var(--primary-color);
-    color: white;
-    font-size: 1.5rem;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-}
-
-.accessibility-trigger {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    border: none;
-    background-color: var(--primary-color);
-    color: white;
-    font-size: 2rem;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    transition: transform 0.2s ease;
-}
-
-.accessibility-trigger:hover {
-    transform: scale(1.1);
-}
-
-
-.contrast-icon {
-    width: 28px; 
-    height: 28px;
-    filter: invert(1); 
+@media (max-width: 768px) {
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
 }
