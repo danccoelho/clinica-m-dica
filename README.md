@@ -102,10 +102,10 @@ O **HealhtLife** é uma aplicação web moderna e responsiva, criada com foco em
 **Daniel Campos Coelho**  
 Estudante de Ciência da Computação — CEUB
 🔗 [LinkedIn](https://www.linkedin.com/in/daniel-coelho-818381293/) 💻 [GitHub](https://github.com/danccoelho)
-**Pedro Henrique Postay**
-Estudante de Ciência da Computação — CEUB
-🔗 [LinkedIn](https://www.linkedin.com/in/daniel-coelho-818381293/) 💻 [GitHub](https://github.com/pedrokojiro)
 
+**Pedro Henrique Postay**
+
+Estudante de Ciência da Computação — CEUB🔗 [LinkedIn](https://www.linkedin.com/in/daniel-coelho-818381293/) 💻 [GitHub](https://github.com/pedrokojiro)
 </div>
 
 ---
