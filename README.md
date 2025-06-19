@@ -33,10 +33,26 @@ O **HealhtLife** é uma aplicação web moderna e responsiva, criada com foco em
 
 ---
 
-## 🖼️ Preview
+## 🖼️ Preview Login
 
 <div align="center">
-  <img src="https://i.imgur.com/XFg3fHu.png" width="600" alt="preview do formulário" />
+  <img src="./components/login_clinica.png" width="600" alt="preview do formulário" />
+</div>
+
+---
+
+## 🖼️ Preview Cadastro
+
+<div align="center">
+  <img src="./components/cadastro_clinica.png" width="600" alt="preview do formulário" />
+</div>
+
+---
+
+## 🖼️ Preview Agendamento
+
+<div align="center">
+  <img src="./components/agendamento_clinica.png" width="600" alt="preview do formulário" />
 </div>
 
 ---
@@ -57,6 +73,7 @@ O **HealhtLife** é uma aplicação web moderna e responsiva, criada com foco em
 ## 📁 Estrutura de Pastas
 
 ```plaintext
+├── componentes        # Fotos do site 
 ├── css                # Estilização
 ├── html               # Principal
 ├── js                 # Funcionalidade
@@ -84,9 +101,10 @@ O **HealhtLife** é uma aplicação web moderna e responsiva, criada com foco em
 
 **Daniel Campos Coelho**  
 Estudante de Ciência da Computação — CEUB
-
-🔗 [LinkedIn](https://www.linkedin.com/in/daniel-coelho-818381293/)  
-💻 [GitHub](https://github.com/danccoelho)
+🔗 [LinkedIn](https://www.linkedin.com/in/daniel-coelho-818381293/) 💻 [GitHub](https://github.com/danccoelho)
+**Pedro Henrique Postay**
+Estudante de Ciência da Computação — CEUB
+🔗 [LinkedIn](https://www.linkedin.com/in/daniel-coelho-818381293/) 💻 [GitHub](https://github.com/pedrokojiro)
 
 </div>
 
